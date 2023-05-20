@@ -1,5 +1,9 @@
-header{
-    background-color: #bbbbbb;
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #BBBBBB;
     padding: 20px 0;
 }
 
@@ -11,8 +15,8 @@ header{
 
 nav{
     position: absolute;
-    top: 110px;
-    right: 0px;
+    top:110px;
+    right: 0;
 }
 
 nav li{
@@ -38,24 +42,26 @@ nav a:hover{
     margin: 0 auto;
     padding: 50px;
 }
+
+
 .productos li{
     display: inline-block;
     text-align: center;
     width: 30%;
     vertical-align: top;
     margin: 0 1.5%;
-    border: 2px solid black;
-    border-radius: 5%;
     padding: 30px 20px;
     box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
 }
 
 .productos li:hover{
-    border-color: #c78c19;
+    border-color:#c78c19;
 }
 
 .productos li:active{
-    border-color: green;
+    border-color:#088c19;
 }
 
 .productos h2{
@@ -74,23 +80,23 @@ nav a:hover{
 .producto-precio{
     font-size: 20px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top:10px;
 }
 
 footer{
     text-align: center;
     background: url(imagenes/bg.jpg);
-    padding: 40px;
+    padding:40px;
 }
 
 .copyright{
-    color: white;
+    color:#FFFFFF;
     font-size: 13px;
-    margin: 20px;
+    margin:20px;
 }
 
 form{
-    margin: 40px 0;
+    margin: 40px 15%;
 }
 
 form label, form legend{
@@ -103,11 +109,17 @@ form label, form legend{
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;
-    width: 50%;
+    width: 35%;
+}
+
+.mensaje{
+    width: 40%;
+    
+    margin: 0 0 20px;
 }
 
 .checkbox{
-    margin: 20px 0;
+    margin:20px 0;
 }
 
 .enviar{
@@ -115,58 +127,51 @@ form label, form legend{
     padding: 15px 0;
     font-size: 18px;
     font-weight: bold;
-    color: white;
+    color:white;
     background: orange;
-    border: none;
+    border:none;
     border-radius: 5px;
     transition: 1s all;
-    cursor: pointer;
+    cursor:pointer;
 }
 
 .enviar:hover{
-    background: red;
-    transform: scale(1.2)
+    background: darkorange;
+    transform: scale(1.2);
 }
 
 table{
-    margin: 40px 40px;
+    margin: 40px 20%;
 }
 
 thead{
     background: #555555;
-    color: white;
+    color:white;
     font-weight: bold;
 }
 
-td, th{
-    border: 1px solid black;
+td,th{
+    border: 1px solid #000000;
     padding: 8px 15px;
 }
 
-/*css pagina inicial*/
-
-.principal{
-    background: #fefefe;
-    padding: 3em 0;
-    width: 940px;
-    margin: 0 auto;
-}
-
+/*Aquí inicia el CSS para nuestra home*/
 .banner{
     width: 100%;
+}
+
+.principal{
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto; 
 }
 
 .titulo-principal{
     text-align: center;
     font-size: 2em;
     margin: 0 0 1em;
-    clear: left;
-    font-family: 'Teko', sans-serif;
-    color:  rgba(0, 0, 0);
-}
-
-.titulo-principal::first-letter{
-    font-weight: bold;
+    clear:left;
 }
 
 .principal p{
@@ -183,13 +188,13 @@ td, th{
 
 .utensilios{
     width: 120px;
-    float: left;
+    float:left;
     margin: 0 20px 20px 0;
 }
 
 .mapa{
     padding: 3em 0;
-    background: linear-gradient(#fefefe, #888888);
+    background: linear-gradient(#FEFEFE, #888888)
 }
 
 .mapa p{
@@ -203,9 +208,10 @@ td, th{
 }
 
 .diferenciales{
-    background: #888888;
     padding: 3em 0;
+    background: #888888;
 }
+
 .contenido-diferenciales{
     width: 640px;
     margin: 0 auto;
@@ -221,22 +227,21 @@ td, th{
     line-height: 1.5;
 }
 
-.items::before{
-    content: "★";
+.items:before{
+    content:"★"
 }
 
 .items:first-child{
     font-weight: bold;
 }
 
-.imagenDiferenciales{
+.imagen-diferenciales{
     width: 60%;
-    transition: 400ms opacity;
-    box-shadow: 10px 10px 25px 10px #000000;
-
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000;
 }
 
-.imagenDiferenciales:hover{
+.imagen-diferenciales:hover{
     opacity: 0.3;
 }
 
@@ -245,38 +250,19 @@ td, th{
     margin: 1em auto;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width:480px){
     h1{
         text-align: center;
     }
-
     nav{
         position: static;
     }
-
-    .caja, .principal, .mapa-contenido, .contenido-diferenciales , .video{
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video {
         width: auto;
     }
-
-    .lista-diferenciales, .imagenDiferenciales{
+    .lista-diferenciales, .imagen-diferenciales{
         width: 100%;
     }
+
 }
 
-@media screen and (max-width: 800px){
-    h1{
-        text-align: center;
-    }
-
-    nav{
-        position: static;
-    }
-
-    .caja, .principal, .mapa-contenido, .contenido-diferenciales , .video{
-        width: auto;
-    }
-
-    .lista-diferenciales, .imagenDiferenciales{
-        width: 100%;
-    }
-}
